@@ -11,37 +11,34 @@
         extensions: ["filter", "wide"],
         source: [
           {
-            title: "MetSglString", src: "MetSglString.html", top:true, children: [
+            title: "MetSglString", folder:true, children: [
+              { title: "MetSglString" },
               {
                 title: "Fields", folder: true, children: [
-                  { title: "Empty",  src: "#empty" },
-                  { title: "NullValue", src: "#nullvalue" }
+                  { title: "Empty" },
+                  { title: "NullValue" }
                 ]
               },
               {
                 title: "Methods", folder: true, children: [
-                  { title: "Compare", src: "#compare" },
+                  { title: "Compare" },
                 ]
               }
             ]
           },
           {
-            title: "MetString", src: "MetString.html", top:true, children: [
-              {
-                title: "Fields", folder: true, children: [
-                  { title: "Empty",  src: "#empty" },
-                  { title: "NullValue", src: "#nullvalue" }
-                ]
-              },
+            title: "MetString", folder: true, children: [
+              { title: "MetString" },
+              { title: "Constructors" },
               {
                 title: "Properties", folder: true, children: [
-                  { title: "Value", src: "#value" }
+                  { title: "Value" }
                 ]
               },
               {
                 title: "Methods", folder: true, children: [
-                  { title: "Substring", src: "#substring" },
-                  { title: "ToString", src: "#tostring" }
+                  { title: "Substring" },
+                  { title: "ToString" }
                 ]
               }
             ]
@@ -56,19 +53,34 @@
           }
           
           // ベースページを特定
+          /*
           var parentNode = data.node;
           while (!parentNode.data.top) {
             parentNode = parentNode.parent;
           }
           var page = parentNode.data.src;
+          */
+          var parentNode = data.node.parent;
+          var page = "";
+          while (parentNode.folder) {
+            page = parentNode.title + "/" + page;
+            parentNode = parentNode.parent;
+          }
+          
+          //var page = parentNode.data.src;
           
           // IDを特定
-          var id = data.node.data.src;
+          //var id = data.node.data.src;
+          var id = data.node.title;
           
+          /*
           var uri = page;
           if (data.node.data.top == undefined) {
-            uri += id;
+            uri += "/" + id;
           }
+          */
+          var uri = page + "/" + id + ".html";
+          
           parent.contents.location.href = uri;
         }
       });

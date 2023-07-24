@@ -1,0 +1,43 @@
+﻿<!DOCTYPE>
+<html lang="ja">
+<head>
+  <script src="../../../../assets/prism.js"></script>
+  <link rel="stylesheet" href="../../../../assets/prism.css" />
+  <style>
+    dt {
+    	    /*左に寄せる*/
+    	    float: left ;
+    	    /*後続の左寄せを解除*/
+    	    clear: left ;
+    	    margin-right: 0.5em ;
+    	    width: 120px ;
+    }
+
+    dd {
+    	    float: left ;
+    	    margin-left: 1em ;
+    }
+    dl::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>MetString</h1>
+  NullValue
+  <section>
+    <h1>プロパティ</h1>
+    <dl>
+      <dt id="value">Value</dt>
+      <dd>現在の文字列を表現する string 型の値を取得または設定します。</dd>
+      <dt id="nullvalue">NullValue</dt>
+      <dd>null を表現する string 型の値を取得します。</dd>
+    </dl>
+  </section>
+  <pre><code class="language-vb line-numbers">Public Sub Hoge()
+    MsgBox "hogehoge"
+End Sub</code></pre>
+</body>
+</html>
