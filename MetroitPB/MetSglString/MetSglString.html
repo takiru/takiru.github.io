@@ -1,42 +1,171 @@
 ﻿<!DOCTYPE>
 <html lang="ja">
 <head>
-  <script src="../../../assets/prism.js"></script>
-  <link rel="stylesheet" href="../../../assets/prism.css" />
-  <style>
-    dt {
-    	    /*左に寄せる*/
-    	    float: left ;
-    	    /*後続の左寄せを解除*/
-    	    clear: left ;
-    	    margin-right: 0.5em ;
-    	    width: 120px ;
-    }
-
-    dd {
-    	    float: left ;
-    	    margin-left: 1em ;
-    }
-    dl::after {
-      content: "";
-      clear: both;
-      display: block;
-    }
-  </style>
+  <link href="../../css/default.css" rel="stylesheet">
+  <script src="../../assets/prism.js"></script>
+  <link rel="stylesheet" href="../../assets/prism.css" />
 </head>
 <body>
-  <h1>MetSglString</h1>
-  <section>
-    <h1>プロパティ</h1>
-    <dl>
-      <dt id="value"><a href="./Fields/Empty.html">Empty</a></dt>
-      <dd>空を表現する string 型の値を取得または設定します。</dd>
-      <dt id="nullvalue"><a href="./Fields/NullValue.html">NullValue</a></dt>
-      <dd>null を表現する string 型の値を取得します。</dd>
-    </dl>
-  </section>
-  <pre><code class="language-vb line-numbers">Public Sub Hoge()
-    MsgBox "hogehoge"
-End Sub</code></pre>
+  <h1>MetSglString クラス</h1>
+    <h2>定義</h2>
+    <div>
+      アセンブリ: metroit.pbd
+    </div>
+    <div>
+      継承: NonVisualObject
+    </div>
+    
+    <h2>プロパティ</h2>
+    <table class="table">
+      <tr>
+        <td class="command"><a href="./Fields/Empty.html">Empty</a></td>
+        <td>空を表現する string 型の値を取得または設定します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Fields/NullValue.html">NullValue</a></td>
+        <td>null を表現する string 型の値を取得します。</td>
+      </tr>
+    </table>
+    
+    <h2>メソッド</h2>
+    <table class="table">
+      <!-- Compare -->
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m1">Compare(MetString, long, MetString, long, long)</a></td>
+        <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m2">Compare(MetString, long, MetString, long, long, boolean)</a></td>
+        <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.htm#m3">Compare(MetString, MetString)</a></td>
+        <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.htm#m4">Compare(MetString, MetString, boolean)</a></td>
+        <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m5">Compare(string, long, string, long, long)</a></td>
+        <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m6">Compare(string, long, string, long, long, boolean)</a></td>
+        <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m7">Compare(string, string)</a></td>
+        <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Compare.html#m8">Compare(string, string, boolean)</a></td>
+        <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+      </tr>
+      
+      <!-- Concat -->
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m1">Concat(MetString, MetString)</a></td>
+        <td>2つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m2">Concat(MetString, MetString, MetString)</a></td>
+        <td>3つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m3">Concat(MetString, MetString, MetString, MetString)</a></td>
+        <td>4つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m4">Concat(MetString[])</a></td>
+        <td>文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m1">Concat(string, string)</a></td>
+        <td>2つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m2">Concat(string, string, string)</a></td>
+        <td>3つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m3">Concat(string, string, string, string)</a></td>
+        <td>4つの文字列を結合します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Concat.html#m4">Concat(string[])</a></td>
+        <td>文字列を結合します。</td>
+      </tr>
+      
+      <!-- Create -->
+      <tr>
+        <td class="command"><a href="./Methods/Create.html">Create(string)</a></td>
+        <td>文字列オブジェクトを生成します。</td>
+      </tr>
+      
+      <!-- Format -->
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#1">Format(MetString, any, any)</a></td>
+        <td>文字列の書式項目を、指定した 2 つの値の文字列形式に置換します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#2">Format(MetString, any, any, any)</a></td>
+        <td>文字列の書式項目を、指定した 3 つの値の文字列形式に置換します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#3">Format(MetString, any)</a></td>
+        <td>指定した文字列の書式項目を、指定した配列内の対応する文字列形式に置換します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#4">Format(string, any, any)</a></td>
+        <td>文字列の書式項目を、指定した 2 つの値の文字列形式に置換します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#5">Format(string, any, any, any)</a></td>
+        <td>文字列の書式項目を、指定した 3 つの値の文字列形式に置換します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Format.html#6">Format(string, any)</a></td>
+        <td>指定した文字列の書式項目を、指定した配列内の対応する文字列形式に置換します。</td>
+      </tr>
+      
+      <!-- IsNullOrEmpty -->
+      <tr>
+        <td class="command"><a href="./Methods/IsNullOrEmpty.html#1">IsNullOrEmpty(MetString)</a></td>
+        <td>文字列が Null または空文字かどうかを取得します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/IsNullOrEmpty.html#2">IsNullOrEmpty(string)</a></td>
+        <td>文字列が Null または空文字かどうかを取得します。</td>
+      </tr>
+      
+      <!-- IsNullOrWhiteSpace -->
+      <tr>
+        <td class="command"><a href="./Methods/IsNullOrWhiteSpace.html#1">IsNullOrWhiteSpace(MetString)</a></td>
+        <td>文字列が Null または空文字、半角スペースだけで構成されているかどうかを取得します。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/IsNullOrWhiteSpace.html#2">IsNullOrWhiteSpace(string)</a></td>
+        <td>文字列が Null または空文字、半角スペースだけで構成されているかどうかを取得します。</td>
+      </tr>
+      
+      <!-- Join -->
+      <tr>
+        <td class="command"><a href="./Methods/Join.html#1">Join(MetString, MetString[])</a></td>
+        <td>オブジェクト配列の要素を連結します。各要素の間には、指定した区切り記号が挿入されます。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Join.html#2">Join(MetString, MetString[], long, long)</a></td>
+        <td>文字列配列の指定した要素を連結します。各要素の間には、指定した区切り記号が挿入されます。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Join.html#3">Join(string, string[])</a></td>
+        <td>オブジェクト配列の要素を連結します。各要素の間には、指定した区切り記号が挿入されます。</td>
+      </tr>
+      <tr>
+        <td class="command"><a href="./Methods/Join.html#4">Join(string, string[], long, long)</a></td>
+        <td>文字列配列の指定した要素を連結します。各要素の間には、指定した区切り記号が挿入されます。</td>
+      </tr>
+    </table>
 </body>
 </html>

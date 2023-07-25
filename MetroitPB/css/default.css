@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+
+/* 検索ボックス */
+.search_box {
+  margin: 0px 0px 10px 0px;
+}
+.search_box input {
+  width: 100%;
+}
+
+/* 命令セットリスト */
+.table {
+    border: 1px solid #d2d2d2;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+.table tr {
+  border: 1px solid #d2d2d2;
+}
+.table td {
+  padding-right: 10px;
+  vertical-align: top;
+}
+.table .command {
+  width: 20em;
+}
