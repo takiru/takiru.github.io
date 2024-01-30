@@ -9,19 +9,19 @@
 }
 
 /* 命令セットリスト */
-.table {
+.subset_list {
     border: 1px solid #d2d2d2;
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
 }
-.table tr {
+.subset_list tr {
   border: 1px solid #d2d2d2;
 }
-.table td {
+.subset_list td {
   padding-right: 10px;
   vertical-align: top;
 }
-.table .command {
+.subset_list .command {
   width: 20em;
 }

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script src="/MetroitPB/assets/prism.js"></script>
+  <link rel="stylesheet" href="/MetroitPB/assets/prism.css" />
+  <style>
+    dl.attributeList {
+      display: flex;
+    }
+    dl.attributeList dd {
+      margin-left: 8px;
+    }
+    .summaryHolder {
+      display: flex;
+      margin-top: 24px;
+    }
+    :not(a):not(pre)>code {
+      background-color: #e6e6e6;
+      word-wrap: break-word;
+      border-radius: 3px;
+      padding: 0.1em 0.2em;
+      font-size: 85%;
+    }
+  </style>
+</head>
+<body>
+  <h1>MetSglString.IsNullOrEmpty メソッド</h1>
+  <h2>定義</h2>
+  <dl class="attributeList">
+    <dt>アセンブリ:</dt>
+    <dd>Metroit.Runtime.pbd</dd>
+  </dl>
+  
+  <div class="summaryHolder">
+    空の文字列を表します。 このフィールドは読み取り専用です。
+  </div>
+  <div>
+    <pre><code class="language-js line-numbers">String lStr
+lStr = MetSglString.Empty
+</code></pre>
+  </div>
+  
+  <h4>フィールド値</h4>
+  String
+  
+  <h2>注釈</h2>
+  <p>このフィールドの値は、長さ 0 の文字列 "" です。</p>
+  <p>
+  アプリケーション コードでは、このフィールドは、文字列変数を空の文字列に初期化するための代入で最もよく使用されます。
+  文字列 <code>null</code> の値が または <a href="" class="no-loc" data-linktype="relative-path">String.Empty</a>であるかどうかをテストするには、 メソッドを使用します <a href="/MetroitPB/MetSglString/Methods/IsNullOrEmpty.html" class="no-loc" data-linktype="relative-path">IsNullOrEmpty</a> 。</p>
+</body>
+</html>

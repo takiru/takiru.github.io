@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link href="/MetroitPB/css/default.css" rel="stylesheet">
+  <script src="/MetroitPB/assets/prism.js"></script>
+  <link rel="stylesheet" href="/MetroitPB/assets/prism.css" />
+  <style>
+    dl.attributeList {
+      display: flex;
+    }
+    dl.attributeList dd {
+      margin-left: 8px;
+    }
+    .summaryHolder {
+      display: flex;
+      margin-top: 24px;
+    }
+    :not(a):not(pre)>code {
+      background-color: #e6e6e6;
+      word-wrap: break-word;
+      border-radius: 3px;
+      padding: 0.1em 0.2em;
+      font-size: 85%;
+    }
+  </style>
+</head>
+<body>
+  <h1>MetSglString.Compare メソッド</h1>
+  <h2>定義</h2>
+  <dl class="attributeList">
+    <dt>アセンブリ:</dt>
+    <dd>Metroit.Runtime.pbd</dd>
+  </dl>
+  
+  <div class="summaryHolder">
+    指定した 2 つの String オブジェクトを比較し、それらの相対位置を並べ替え順序で示す整数を返します。
+  </div>
+  
+  <h2>オーバーロード</h2>
+  <table class="subset_list">
+    <tr>
+      <td class="command"><a href="#m1">Compare(MetString, long, MetString, long, long)</a></td>
+      <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m2">Compare(MetString, long, MetString, long, long, boolean)</a></td>
+      <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m3">Compare(MetString, MetString)</a></td>
+      <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m4">Compare(MetString, MetString, boolean)</a></td>
+      <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m5">Compare(string, long, string, long, long)</a></td>
+      <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m6">Compare(string, long, string, long, long, boolean)</a></td>
+      <td>指定した2つの文字列の部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m7">Compare(string, string)</a></td>
+      <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+    <tr>
+      <td class="command"><a href="#m8">Compare(string, string, boolean)</a></td>
+      <td>指定した2つの文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。</td>
+    </tr>
+  </table>
+  
+  <h2>注釈</h2>
+  <p><a href="">Compare</a> メソッドのすべてのオーバーロードは、2 つの比較対照値の構文上の関係を示す 32 ビット符号付き整数を返します。</p>
+  
+  <table class="subset_list">
+    <tr>
+      <th>[値]</th>
+      <th>条件</th>
+    </tr>
+    <tr>
+      <td class="command">0 より小さい値</td>
+      <td>最初の部分文字列は、並べ替え順序で 2 番目の部分文字列の前にあります。</td>
+    </tr>
+    <tr>
+      <td class="command">ゼロ</td>
+      <td>部分文字列は並べ替え順序で同じ位置で発生するか、<code>length</code> はゼロです。</td>
+    </tr>
+    <tr>
+      <td class="command">0 より大きい値</td>
+      <td>最初の部分文字列は、並べ替え順序で 2 番目の部分文字列の後に続きます。</td>
+    </tr>
+  </table>
+  
+  <h1 id="m1">Compare(MetString, long, MetString, long, long)</h1>
+  
+  <div class="summaryHolder">
+    指定した 2 つの String オブジェクトの部分文字列を比較し、それらの相対位置を並べ替え順序で示す整数を返します。
+  </div>
+  
+  <div>
+    <pre><code class="language-js line-numbers">Public Long Compare(MetString strA, long indexA, MetString strB, long indexB, long length)
+</code></pre>
+  </div>
+  
+  <h4>パラメーター</h4>
+  <div class="propertyInfo">
+    <dl class="parameterList">
+      <dt><code>strA</code></dt>
+      <dd>MetString</dd>
+    </dl>
+    <p>比較で使用する最初の文字列。</p>
+  </div>
+  
+  <h2>注釈</h2>
+  <p>このフィールドの値は、長さ 0 の文字列 "" です。</p>
+  <p>
+  アプリケーション コードでは、このフィールドは、文字列変数を空の文字列に初期化するための代入で最もよく使用されます。
+  文字列 <code>null</code> の値が または <a href="" class="no-loc" data-linktype="relative-path">String.Empty</a>であるかどうかをテストするには、 メソッドを使用します <a href="/MetroitPB/MetSglString/Methods/IsNullOrEmpty.html" class="no-loc" data-linktype="relative-path">IsNullOrEmpty</a> 。</p>
+</body>
+</html>

@@ -1,43 +1,58 @@
-﻿<!DOCTYPE>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <script src="../../../assets/prism.js"></script>
-  <link rel="stylesheet" href="../../../assets/prism.css" />
+  <script src="/MetroitPB/assets/prism.js"></script>
+  <link rel="stylesheet" href="/MetroitPB/assets/prism.css" />
   <style>
-    dt {
-    	    /*左に寄せる*/
-    	    float: left ;
-    	    /*後続の左寄せを解除*/
-    	    clear: left ;
-    	    margin-right: 0.5em ;
-    	    width: 120px ;
+    .content h4 {
+      margin-top: 36px;
+      margin-bottom: 6px;
     }
-
-    dd {
-    	    float: left ;
-    	    margin-left: 1em ;
+    dl.attributeList {
+      display: flex;
     }
-    dl::after {
-      content: "";
-      clear: both;
-      display: block;
+    dl.attributeList dd {
+      margin-left: 8px;
+    }
+    .summaryHolder {
+      display: flex;
+      margin-top: 24px;
+    }
+    :not(a):not(pre)>code {
+      background-color: #e6e6e6;
+      word-wrap: break-word;
+      border-radius: 3px;
+      padding: 0.1em 0.2em;
+      font-size: 85%;
     }
   </style>
 </head>
 <body>
-  <h1>MetSglString</h1>
-  Empty
-  <section>
-    <h1>プロパティ</h1>
-    <dl>
-      <dt id="value">Value</dt>
-      <dd>現在の文字列を表現する string 型の値を取得または設定します。</dd>
-      <dt id="nullvalue">NullValue</dt>
-      <dd>null を表現する string 型の値を取得します。</dd>
+  <div class="content">
+    <h1>MetSglString.Empty フィールド</h1>
+    <h2>定義</h2>
+    <dl class="attributeList">
+      <dt>アセンブリ:</dt>
+      <dd>Metroit.Runtime.pbd</dd>
     </dl>
-  </section>
-  <pre><code class="language-js line-numbers">String lStr
-lStr = MetSglString.Empty
-</code></pre>
+    
+    <div class="summaryHolder">
+      空の文字列を表します。 このフィールドは読み取り専用です。
+    </div>
+    <div>
+      <pre><code class="language-js line-numbers">String lStr
+lStr = MetSglString.Empty</code></pre>
+    </div>
+    
+    <h4>フィールド値</h4>
+    String
+    
+    <h2>注釈</h2>
+    <p>このフィールドの値は、長さ 0 の文字列 "" です。</p>
+    <p>
+    アプリケーション コードでは、このフィールドは、文字列変数を空の文字列に初期化するための代入で最もよく使用されます。
+    文字列 <code>null</code> の値が または <a href="">String.Empty</a>であるかどうかをテストするには、<a href="/MetroitPB/MetSglString/Methods/IsNullOrEmpty.html">IsNullOrEmpty</a>メソッドを使用します。
+    </p>
+  </content>
 </body>
 </html>
